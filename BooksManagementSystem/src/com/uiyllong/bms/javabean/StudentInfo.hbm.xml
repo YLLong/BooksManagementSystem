@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.uiyllong.bms.javabean.StudentInfo" table="bms_studentInfo">
+        <id name="stuID">
+            <generator class="assigned"/>
+        </id>
+        <property name="stuName" not-null="true"/>
+        <property name="gender"/>
+        <property name="age"/>
+        <property name="birth"/>
+        <property name="address"/>
+        <property name="tele"/>
+        <property name="stuType"/>
+        <property name="enterDate"/>
+        <property name="graduateDate"/>
+        <one-to-one name="student" class="com.uiyllong.bms.javabean.Student" property-ref="studentInfo"/>
+    </class>
+
+</hibernate-mapping>

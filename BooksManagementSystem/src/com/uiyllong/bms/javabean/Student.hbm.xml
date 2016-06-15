@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.uiyllong.bms.javabean.Student" table="bms_student">
+        <id name="id">
+            <generator class="native"/>
+        </id>
+        <property name="password" not-null="true"/>
+        <many-to-one name="studentInfo" unique="true" column="stuID" class="com.uiyllong.bms.javabean.StudentInfo" cascade="all"/>
+    </class>
+
+</hibernate-mapping>

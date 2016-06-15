@@ -1,0 +1,27 @@
+#borrowBook{
+	margin: 0 auto;
+	text-align: center;
+}
+.borrowBook1{
+	margin-left: 100px;
+	float: left;
+}
+.borrowBook2{
+	margin-right: 100px;
+	float: right;
+}
+/*p{
+	text-align: center;
+	vertical-align: middle;
+}*/
+span{
+	font-family: "微软雅黑";
+	font-size: 20px;
+	display: block;
+}
+input{
+	height: 20px;
+	border: 1px solid gold;
+	border-radius: 5px;
+	
+}

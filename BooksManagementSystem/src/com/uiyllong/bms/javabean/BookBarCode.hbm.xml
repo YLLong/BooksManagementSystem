@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.uiyllong.bms.javabean.BookBarCode" table="bms_bookbarcode">
+        <id name="bookID">
+            <generator class="assigned"/>
+        </id>
+        <many-to-one name="bookInfo" class="com.uiyllong.bms.javabean.BookInfo" column="ISBN" cascade="all"/>
+    </class>
+
+</hibernate-mapping>

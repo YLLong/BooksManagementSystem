@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+/*body{background-color:#F0F0F0}*/
+*font-family: "微软雅黑"
+#Slogin{
+	width:1000px;
+	overflow:hidden;
+	margin:0 auto;
+}
+#Slogin p{text-align:center;}
+.oneTitle{font-size:30px;font-weight: bold;}
+.grayFont{color:#666;}
+.textBox{width:270px;height:35px;border-radius:5px;border:1px solid #CCC;padding-left:10px;}
+.submitButton{width:135px;height:35px; background-color:#F0184D;color:white;border:0px;}
+.resetButton{width:135px;height:35px;background-color:#FFFFFF;border:1px solid #CCC}
+

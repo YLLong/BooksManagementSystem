@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+/*body{background-color:#F0F0F0}*/
+*{font-family: "微软雅黑"}
+#Choose{
+	width:1000px;
+	overflow:hidden;
+	margin:0 auto;
+}
+#Choose p{text-align:center;}
+.oneTitle{font-size:30px;font-weight: bold;}
+.studentButton{font-size:20px;width:200px;height:70px;background-color:#F0184D;color:white;border:0px;border-radius:10px;}
+.admButton{font-size:20px;width:200px;height:70px;background-color:#F0184D;color:white;border:0px;border-radius:10px;}
+
+

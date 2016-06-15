@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <package name="default" extends="json-default">
+        <action name="admin-*" class="com.uiyllong.bms.actions.AdminAction" method="{1}">
+            <result name="login_success">/admin/admin-login-success.jsp</result>
+            <result name="login_error">/admin/admin-login.jsp</result>
+            <!--ajax 请求-->
+            <result name="fail"></result>
+            <result type="json" name="{1}">
+                <param name="root">result</param>
+            </result>
+        </action>
+
+
+        <action name="books-*" class="com.uiyllong.bms.actions.BooksAction" method="{1}">
+            <result name="query_success">/books/bookQuery.jsp</result>
+            <result name="queryStudentByStuID_success">/books/borrowBook.jsp</result>
+            <result name="queryBybooKID_success">/books/returnBook.jsp</result>
+            <result name="returnBook_success">/books/returnBook.jsp</result>
+            <!--图片上传-->
+            <result name="input">/books/bookInfo.jsp</result>
+            <result name="success">/books/bookInfo.jsp</result>
+            <param name="uploadDir">/uploadphoto</param>
+            <param name="allowTypes">image/png,image/gif,image/jpeg</param>
+            <!--ajax 请求-->
+            <result name="fail"></result>
+            <result type="json" name="{1}">
+                <param name="root">result</param>
+            </result>
+        </action>
+
+        <action name="page" class="com.uiyllong.bms.actions.PageAction">
+            <result type="redirectAction">
+                <param name="actionName">books-query.action</param>
+                <param name="pageSize">${pageSize}</param>
+                <param name="pageNum">${pageNum}</param>
+                <param name="totalpage">${totalpage}</param>
+                <param name="bookName">${bookName}</param>
+            </result>
+        </action>
+
+        <action name="borrowBook" class="com.uiyllong.bms.actions.BorrowBookAction" method="borrowBook">
+            <result name="borrowBook_success">/books/borrowBook.jsp</result>
+        </action>
+
+    </package>
+
+    <!--学生端的 action 配置-->
+    <package name="student" extends="struts-default">
+        <action name="student-*" class="com.uiyllong.bms.actions.StudentAction" method="{1}">
+            <result name="login_success">/students/welcom.jsp</result>
+            <result name="login_error">/students/student-login.jsp</result>
+            <result name="currentBorrow_success">/students/student-currentBorrow.jsp</result>
+        </action>
+    </package>
+
+</struts>

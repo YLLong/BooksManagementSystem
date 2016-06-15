@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+/*body{background-color:#F0F0F0}*/
+/**font-family: "微软雅黑"*/
+#welcome{
+	width:100%;
+	overflow:hidden;
+	margin:0 auto;
+}
+#welcome p{text-align:center;}
+.head{font-size:30px;font-weight: 0;font-family: "微软雅黑"}
+.StuButton{width:135px;height:35px; background-color:#F0184D;color:white;border:0px;border:2px solid #CCC;font-family: "微软雅黑";}

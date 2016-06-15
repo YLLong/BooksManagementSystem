@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+<class name="com.uiyllong.bms.javabean.AdminInfo" table="bms_adminInfo">
+    <id name="adminID" length="6">
+        <generator class="assigned"/>
+    </id>
+    <property name="adminName"/>
+    <property name="gender"/>
+    <property name="age"/>
+    <property name="IDcard"/>
+    <property name="tele"/>
+    <property name="birth"/>
+    <property name="educated"/>
+    <property name="address"/>
+    <property name="hiredate"/>
+    <one-to-one name="admin" class="com.uiyllong.bms.javabean.Admin" property-ref="admininfo"/>
+</class>
+
+</hibernate-mapping>

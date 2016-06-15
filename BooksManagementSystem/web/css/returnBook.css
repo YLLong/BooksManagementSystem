@@ -1,0 +1,19 @@
+#bookid{
+	margin: 0 auto;
+	text-align: center;
+	width: 100%;
+}
+#bookid p{
+	font-family: "微软雅黑";
+	font-size: 20px;
+}
+#bookid input{
+	width: 300px;
+	height: 30px;
+	border: 1px solid gold;
+	border-radius: 10px;
+	padding: 15px;
+}
+td{
+	text-align: center;
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.uiyllong.bms.javabean.BorrowBooks" table="bms_borrowBooks">
+        <id name="id">
+            <generator class="native"/>
+        </id>
+        <property name="stuID"/>
+        <property name="stuName"/>
+        <property name="bookID"/>
+        <property name="bookName"/>
+        <property name="checkoutDate"/>
+        <property name="sReturnDate"/>
+    </class>
+
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.uiyllong.bms.javabean.BookInfo" table="bms_bookinfo">
+        <id name="ISBN">
+            <generator class="assigned"/>
+        </id>
+        <property name="bookName"/>
+        <property name="press"/>
+        <property name="writer"/>
+        <property name="content"/>
+        <property name="price"/>
+        <property name="volumeOfConpies"/>
+        <property name="bookStock"/>
+        <property name="photo"/>
+        <property name="bookType"/>
+        <set name="bookBarCode" inverse="true" cascade="all">
+            <key column="ISBN"></key>
+            <one-to-many class="com.uiyllong.bms.javabean.BookBarCode"/>
+        </set>
+    </class>
+
+</hibernate-mapping>
